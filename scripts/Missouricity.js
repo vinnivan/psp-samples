@@ -3,7 +3,7 @@ const HTMLParser = require('node-html-parser');
 
 const Utility = require('./scrape-utilities.js');
 
-
+/*Basically, my code now are extracting data of all meetings in 2020. If necessary, I can add if statement to select only the upcoming meetings.*/
 
  const scrape = async () => {
 
@@ -27,15 +27,19 @@ const Utility = require('./scrape-utilities.js');
 			const row = rows[i];
 			let td = row.querySelectorAll('td');
 			for (let u = 1; u <td.length; u++) {
-				date = `${td[0].text} 7:00 PM`;
+				date = td[0].text;
 				let type = td[u].getAttribute('data-th')
 				if (type == "Regular Meeting") {
-					title = "Regular Meeting" + " " + td[u].querySelector('a').text;
-					link = "https://www.missouricitytx.gov/" + td[u].querySelector('a').getAttribute('href');
+					if (td[u].querySelector('a')) {
+						title = "Regular Meeting" + " " + td[u].querySelector('a').text;
+						link = "https://www.missouricitytx.gov/" + td[u].querySelector('a').getAttribute('href');
+					}
 				}
 				if (type == "Special Meeting") {
-					title = "Special Meeting" + " " + td[u].querySelector('a').text;
-					link = "https://www.missouricitytx.gov/" + td[u].querySelector('a').getAttribute('href');
+					if (td[u].querySelector('a')) {
+						title = "Special Meeting" + " " + td[u].querySelector('a').text;
+						link = "https://www.missouricitytx.gov/" + td[u].querySelector('a').getAttribute('href');
+					}
 				}
 				if (type == "Video") {
 					break

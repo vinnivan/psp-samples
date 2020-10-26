@@ -12,6 +12,7 @@ const Utility = require('./scrape-utilities.js');
     let events = [];
     let errors = [];
 
+    /* Example of what the URL will look like */
     /* https://pearlandtx.civicweb.net/Portal/MeetingInformation.aspx?Org=Cal&Id=530 */
     try {
         await driver.get('https://www.pearlandtx.gov/government/agendas/city-council');

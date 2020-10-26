@@ -23,7 +23,10 @@ Now find the matching version from the Chrome Driver [downloads](https://sites.g
 
 After updating the System Path Environment Variable open a new command window and type `chromedriver` and then press enter. You should see it display a message that it has successfully started ChromeDriver. Press ctrl+c to exit back to the command line.
 
-Next clone or download this repo to a local working directory. Open a new command window and navigate to the working directory. Before running the script the dependency javascript files need to be retrieved. Type `npm install` and press enter. After this completes successfully the sample script can now be run. To do this type `node pearland.js` and press enter. If everything is working as expected you'll see Chrome open up, navigate to the Pearland city web site and then disappear and in the console window should be a list of the latest City Council Agenda links.
+Next Fork this repo and then Clone to a local working directory. 
+> Note: It's important to Fork so that when you're finished with your code it can be submitted back to to the PSP Repo as a Pull Request. 
+
+Open a new command window and navigate to the working directory. Before running the script the dependency javascript files need to be retrieved. Type `npm install` and press enter. After this completes successfully the sample script can now be run. To do this type `node pearland.js` and press enter. If everything is working as expected you'll see Chrome open up, navigate to the Pearland city web site and then disappear and in the console window should be a list of the latest City Council Agenda links.
 
 
 
