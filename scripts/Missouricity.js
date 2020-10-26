@@ -3,8 +3,6 @@ const HTMLParser = require('node-html-parser');
 
 const Utility = require('./scrape-utilities.js');
 
-/*Basically, my code now are extracting data of all meetings in 2020. If necessary, I can add if statement to select only the upcoming meetings.*/
-
  const scrape = async () => {
 
     let driver = await new Builder().forBrowser('chrome').build();
@@ -27,7 +25,7 @@ const Utility = require('./scrape-utilities.js');
 			const row = rows[i];
 			let td = row.querySelectorAll('td');
 			for (let u = 1; u <td.length; u++) {
-				date = td[0].text;
+				date = `${td[0].text} 7:00PM`;
 				let type = td[u].getAttribute('data-th')
 				if (type == "Regular Meeting") {
 					if (td[u].querySelector('a')) {
