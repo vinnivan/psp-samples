@@ -27,19 +27,11 @@ const Utility = require('./scrape-utilities.js');
 		let title1
 		let title2
 		let value
-		/*row=rows[1].text
-		f=rows[1].querySelectorAll('a')
-		z=f[2].text
-		q=row.replace(z,'')
-		q=q.replace('**','')
-		events.push(Number.isInteger(z))
-		events.push(z)
-		events.push(q)*/
-        debugger;
+
+		debugger;
 		for (let i = 0; i < 12; i++) {
 			const row = rows[i];
-			/*let text = row.querySelector('div').childNodes[0].text
-			events.push(text)*/
+
 			let allmeeting = row.querySelectorAll('a');
 			for (let s = 0; s < allmeeting.length; s++) {
 				if(i=="0") {
