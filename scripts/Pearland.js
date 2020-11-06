@@ -74,7 +74,7 @@ const Utility = require('./scrape-utilities.js');
 
         }
     } catch (err) {
-
+        console.log(err.messsage);
     } finally {
         await driver.quit();
     }
