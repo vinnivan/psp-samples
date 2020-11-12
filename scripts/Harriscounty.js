@@ -299,9 +299,10 @@ const Utility = require('./scrape-utilities.js');
 };
 
 
+return scrape();
 
 
-let result = scrape().then(r => {
+//let result = scrape().then(r => {
 
-    console.log(r);
-});
+//    console.log(r);
+//});

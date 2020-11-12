@@ -2,7 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\psp-samples",
-    "\\scripts"
+    "\\scripts",
+    "\\scripts\\counties",
+    "\\scripts\\municipalities"
   ],
+  "SelectedNode": "\\scripts",
   "PreviewInSolutionExplorer": false
 }

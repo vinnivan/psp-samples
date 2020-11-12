@@ -1,8 +1,9 @@
 ﻿const { Builder, By, Key, until } = require('selenium-webdriver');
 const HTMLParser = require('node-html-parser');
-const Utility = require('./scrape-utilities.js');
+const Utility = require('../scrape-utilities.js');
 
-module.exports = async () => {
+
+const scrape = async () => {
     let driver = await new Builder().forBrowser('chrome').build();
 
     let events = [];
@@ -54,6 +55,8 @@ module.exports = async () => {
             }
 
         }
+    } catch (err) {
+        console.log(err.messsage);
 
     } finally {
         await driver.quit();
@@ -88,4 +91,6 @@ module.exports = async () => {
     }
 
 
-}
+};
+
+scrape().then(r => console.log(r));

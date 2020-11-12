@@ -65,7 +65,7 @@ const Utility = require('./scrape-utilities.js');
 };
 
 
-
+module.exports = scrape;
 
 let result = scrape().then(r => {
 
