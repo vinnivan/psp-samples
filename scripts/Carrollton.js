@@ -21,6 +21,7 @@ const Utility = require('./scrape-utilities.js');
         let root = HTMLParser.parse(tableHtml);
         let rows = root.querySelector("tbody").querySelectorAll('tr');
         let title;
+		let meetingTime;
         let date;
         let link;
 
